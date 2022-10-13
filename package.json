@@ -1,0 +1,22 @@
+{
+  "name": "@simpleseries/mvc",
+  "version": "0.0.6",
+  "description": "An MVC framework as part of the SimpleSeries books on software architecture and design.",
+  "main": "src/mvc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SimpleSeries/MVC.git"
+  },
+  "keywords": [
+    "mvc"
+  ],
+  "author": "Drew Ogryzek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimpleSeries/MVC/issues"
+  },
+  "homepage": "https://github.com/SimpleSeries/MVC#readme"
+}
