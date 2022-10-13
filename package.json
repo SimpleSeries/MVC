@@ -1,8 +1,9 @@
 {
   "name": "@simpleseries/mvc",
-  "version": "0.0.6",
+  "version": "0.0.12",
   "description": "An MVC framework as part of the SimpleSeries books on software architecture and design.",
   "main": "src/mvc.js",
+  "types": "mvc.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/SimpleSeries/MVC/issues"
   },
-  "homepage": "https://github.com/SimpleSeries/MVC#readme"
+  "homepage": "https://github.com/SimpleSeries/MVC#readme",
+  "dependencies": {
+    "@types/node": "^18.8.5"
+  }
 }
