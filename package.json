@@ -1,6 +1,6 @@
 {
   "name": "@simpleseries/mvc",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "An MVC framework as part of the SimpleSeries books on software architecture and design.",
   "main": "src/mvc.js",
   "types": "mvc.d.ts",

@@ -6,11 +6,43 @@ npm install @simpleseries/mvc
 
 ## Example Usage  
 
-Import `SimpleSeries/MVC` and extend the models you'd like to have use it.  
-  
+Import `SimpleSeries/MVC` and extend the models you'd like to have use it. Create a directory for data files and for your todolist app:
+
+```
+mkdir db todolist
+```
+And add some files:
+```
+touch tsconfig.json package.json app.ts todolist/list.ts todolist/listitem.ts
+```
+
+We have two dependencies, @simpleseries/mvc and @types/node:
+
+```json
+// package.json
+{
+    "dependencies": {
+        "@simpleseries/mvc": "latest",
+        "@types/node": "latest"
+    }
+}
+
+```
+define a directory for our typscript compiled javascript
+
+```json
+// tsconfig.json
+{
+    "compilerOptions": {
+        "outDir": "./javascript"
+    }
+}
+
+```
+
 ```typescript
 // todolist/list.ts
-import { MVC } from '@SimpleSeries/MVC';
+import { MVC } from '@simpleseries/mvc';
 import { ListItem } from './listitem';
 
 class TodoList extends MVC.Model {
@@ -39,13 +71,13 @@ export { TodoList };
 
 ```typescript
 // todolist/listitem.ts
-import { MVC } from '@SimpleSeries/MVC';
+import { MVC } from '@simpleseries/mvc';
 
 class ListItem extends MVC.Model {
     listId: string;
     description: string;
     done: boolean;
-    constructor(listId, description){
+    constructor(listId: string, description: string){
         super();
         this.listId = listId;
         this.description = description;
@@ -62,7 +94,7 @@ export { ListItem }
 ```
 
 ```typescript
-// example.js
+// app.js
 import { TodoList } from './todolist/list';
 
 
@@ -73,4 +105,10 @@ todoList.addItem("take a shower");
 todoList.addItem("brush teeth");
 
 todoList.create();
+```
+
+compile and run
+```bash
+ts
+node javascript/app.js
 ```
